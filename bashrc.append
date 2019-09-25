@@ -1,11 +1,14 @@
 
 # Begin custom definitions
 export PATH=~/bin:$PATH
+export GOPATH=${HOME}/go
+export PATH=/usr/local/go/bin:${PATH}:${GOPATH}/bin
 export HISTSIZE=NONE
 export EDITOR=vim
 
 alias grep="grep --color"
 alias clc=clear
+alias db-sing="cd /home/dave/Repos/singularity/cmd/singularity && dlv debug --headless --listen=:2345 --api-version=2 --log --"
 
 # bsd and gnu ls need different options for color
 if [ X`uname` = XDarwin ]; then
