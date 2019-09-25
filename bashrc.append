@@ -8,7 +8,7 @@ export EDITOR=vim
 
 alias grep="grep --color"
 alias clc=clear
-alias db-sing="cd /home/dave/Repos/singularity/cmd/singularity && dlv debug --headless --listen=:2345 --api-version=2 --log --"
+alias db-sing="cd ${HOME}/Repos/singularity/cmd/singularity && dlv debug --headless --listen=:2345 --api-version=2 --log --"
 
 # bsd and gnu ls need different options for color
 if [ X`uname` = XDarwin ]; then
