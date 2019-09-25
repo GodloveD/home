@@ -1,0 +1,22 @@
+
+# Begin custom definitions
+export PATH=~/bin:$PATH
+export HISTSIZE=NONE
+export EDITOR=vim
+
+alias grep="grep --color"
+alias clc=clear
+
+# bsd and gnu ls need different options for color
+if [ X`uname` = XDarwin ]; then
+    alias ll="ls -lhG"
+else
+    alias ll="ls -lh --color"
+fi
+
+# useful on mac for fixing audio broken by VMWare(?)
+if [ X`uname` = XDarwin ]; then
+    alias fix_audio="sudo killall coreaudiod"
+fi
+
+PS1="\n\[\e[32m\]\@\[\e[m\]\n\[\e[33m\]\u\[\e[m\]\[\e[32m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\]\[\e[32m\]:\[\e[m\]\[\e[33m\]\w\[\e[m\]\n\$ "
